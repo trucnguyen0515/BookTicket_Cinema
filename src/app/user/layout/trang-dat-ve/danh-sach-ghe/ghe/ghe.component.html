@@ -1,0 +1,8 @@
+<ng-container *ngIf="ghe.Status===true; else GheChuaDat">
+    <button disabled style="cursor: no-drop;" class="ghe duocdat"><small>{{ghe.SeatName}}</small></button>
+</ng-container>
+
+
+<ng-template #GheChuaDat>
+    <button (click)="ChonGhe()" class="ghe" [ngClass]="{dachon:ghe.selected}"><small>{{ghe.SeatName}}</small></button>
+</ng-template>

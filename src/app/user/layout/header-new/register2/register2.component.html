@@ -1,0 +1,248 @@
+<div id="Register2">
+
+    <form [formGroup]="myformRes" #RegisterForm="ngForm" (ngSubmit)="Register(RegisterForm.value,DateOfBirth2.value)">
+        
+            <div class="row">
+                <div class="col-6">
+                        <div class="group">
+                                <input type="text"
+                                       formControlName="FirstName" 
+                                       name="FirstName"
+                                       ngModel
+                                       required
+                                       [ngClass]="{'thatbai': FirstName.invalid && (FirstName.dirty || FirstName.touched)}">
+                                <label class="label">Họ</label>
+                                <div class="bar" [ngClass]="{'thatbai': FirstName.invalid && (FirstName.dirty || FirstName.touched)}"></div>
+                                <div class="loi mt-1" *ngIf="FirstName.errors && (FirstName.dirty || FirstName.touched)">
+                                    <p *ngIf="FirstName.errors.required" class="m-0">Không được để trống!</p>
+                                    <p *ngIf="FirstName.errors.minlength || FirstName.errors.maxlength" class="m-0">Tối đa 4 - 8 kí tự</p>
+                                    <p *ngIf="FirstName.errors.pattern">Không đúng định dạng</p>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-6">
+                        <div class="group">
+                                <input type="text"
+                                       formControlName="LastName" 
+                                       name="LastName"
+                                       ngModel
+                                       required
+                                       [ngClass]="{'thatbai': LastName.invalid && (LastName.dirty || LastName.touched)}">
+                                <label class="label">Tên</label>
+                                <div class="bar" [ngClass]="{'thatbai': LastName.invalid && (LastName.dirty || LastName.touched)}"></div>
+                                <div class="loi mt-1" *ngIf="LastName.errors && (LastName.dirty || LastName.touched)">
+                                    <p *ngIf="LastName.errors.required" class="m-0">Không được để trống!</p>
+                                    <p *ngIf="LastName.errors.minlength || LastName.errors.maxlength" class="m-0">Tối đa 4 - 8 kí tự</p>
+                                    <p *ngIf="LastName.errors.pattern">Không đúng định dạng</p>
+                                </div>
+                            </div>
+                </div>
+            </div>
+   
+            <div class="group">
+                <input type="text"
+                       formControlName="UserName" 
+                       name="UserName"
+                       ngModel
+                       required
+                       [ngClass]="{'thatbai': UserName.invalid && (UserName.dirty || UserName.touched)}">
+                <label class="label">Tài Khoản</label>
+                <div class="bar" [ngClass]="{'thatbai': UserName.invalid && (UserName.dirty || UserName.touched)}"></div>
+                <div class="loi mt-1" *ngIf="UserName.errors && (UserName.dirty || UserName.touched)">
+                    <p *ngIf="UserName.errors.required" class="m-0">Không được để trống!</p>
+                    <p *ngIf="UserName.errors.minlength || UserName.errors.maxlength" class="m-0">Tối đa 8 - 15 kí tự</p>
+                    <p *ngIf="UserName.errors.pattern">Không chứa kí tự đặc biệt</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                        <div class="group">
+                                <input type="password"
+                                       formControlName="PassWord" 
+                                       name="PassWord"
+                                       ngModel
+                                       required 
+                                       [ngClass]="{'thatbai': PassWord.errors && (PassWord.dirty || PassWord.touched)}">                
+                                <label class="label">Mật Khẩu</label>
+                                <div class="bar" [ngClass]="{'thatbai': PassWord.invalid && (PassWord.dirty || PassWord.touched)}"></div>
+                                <div class="loi mt-1" *ngIf="PassWord.errors && (PassWord.dirty || PassWord.touched)">
+                                    <p *ngIf="PassWord.errors.required" class="m-0">Không được để trống!</p>
+                                    <p *ngIf="PassWord.errors.minlength || PassWord.errors.maxlength">Tối đa 4 - 8 kí tự</p>
+                                </div>
+                            </div>
+                </div>
+                <div class="col-6">
+                        <div class="group">
+                                <input type="password"
+                                       formControlName="RePass" 
+                                       name="RePass"
+                                       ngModel
+                                       required 
+                                       [ngClass]="{
+                                           'thatbai': RePass.errors && (RePass.dirty || RePass.touched),
+                                           'thatbai2': RePass.value != PassWord.value && (RePass.dirty)
+                                        }">
+                                <label class="label">Nhập lại Mật Khẩu</label>
+                                <div class="bar" [ngClass]="{'thatbai': RePass.invalid && (RePass.dirty || RePass.touched),'thatbai3': RePass.value != PassWord.value && (RePass.dirty)}"></div>
+                                <div class="loi mt-1" *ngIf="RePass.errors && (RePass.dirty || RePass.touched)">
+                                    <p class="m-0" *ngIf="RePass.errors.required">Không được để trống!</p>
+                                </div>
+                                <div class="loi mt-1" *ngIf="RePass.value != PassWord.value && (RePass.dirty)">
+                                    <p class="repass m-0" *ngIf="RePass.value != PassWord.value">Mật khẩu nhập lại không chính xác!</p>
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+
+            <div class="group">
+                    <input type="text"
+                           formControlName="Email" 
+                           name="Email"
+                           ngModel
+                           required
+                           [ngClass]="{'thatbai': Email.invalid && (Email.dirty || Email.touched)}">
+                    <label class="label">Email</label>
+                    <div class="bar" [ngClass]="{'thatbai': Email.invalid && (Email.dirty || Email.touched)}"></div>
+                    <div class="loi mt-1" *ngIf="Email.errors && (Email.dirty || Email.touched)">
+                        <p *ngIf="Email.errors.required">Không được để trống!</p>
+                        <p *ngIf="Email.errors.pattern">Không đúng định dạng!</p>
+                    </div>
+            </div>
+
+            <div class="group">
+                    <input type="text"
+                           #DateOfBirth2
+                           id="DateOfBirth2"
+                           name="DateOfBirth2"
+                           class="input datepicker-here"
+                           data-language='vn'
+                           data-multiple-dates="1"
+                           data-multiple-dates-separator=", "
+                           data-position='top left'
+                           data-date-format="mm/dd/yyyy"
+                           required
+                           (blur)="validateDate()"
+                           >
+                    <label class="label label2">Sinh Nhật</label>
+                    <div class="bar bar2"></div> 
+                    <p class="loi loi1 m-0 pt-1">Không được để trống!</p>
+                    <p class="loi2">Không đúng định dạng! (MM/DD/YYYY)</p>
+            </div>
+
+            <div class="group">
+                <input type="text"
+                       formControlName="Phone" 
+                       name="Phone"
+                       ngModel
+                       required 
+                       [ngClass]="{'thatbai': Phone.errors && (Phone.dirty || Phone.touched)}">
+                <label class="label">Điện Thoại</label>
+                <div class="bar" [ngClass]="{'thatbai': Phone.invalid && (Phone.dirty || Phone.touched)}"></div>
+                <div class="loi mt-1" *ngIf="Phone.errors && (Phone.dirty || Phone.touched)">
+                    <p>Không được để trống!</p>
+                </div>
+            </div>
+        
+        
+              
+                <button class="btnDangky mb-4 d-flex">
+                        <div class="spinner">
+                                <div class="cube1"></div>
+                                <div class="cube2"></div>
+                              </div>
+                        Đăng Ký
+                </button>
+        
+        </form>
+
+<!-- <form role="form" #registerForm="ngForm" (ngSubmit)="RegisterUser(registerForm.value,thamso.value)">
+  <div class="row">
+      <div class="col-6">
+          <div class="group">      
+              <input type="text" name="FirstName" id="FirstName" #FirstName="ngModel" ngModel required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label class="label">Họ</label>
+          </div>
+      </div>
+      <div class="col-6">
+          <div class="group">      
+              <input type="text" name="LastName" id="LastName" #LastName="ngModel" ngModel required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label class="label">Tên</label>
+          </div>
+      </div>
+  </div>
+
+  <div class="group">      
+      <input type="text" name="UserName" id="UserName" #UserName="ngModel" ngModel required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label class="label">Tài khoản</label>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+        <div class="group">      
+            <input type="text" name="Password" id="Password" #Password="ngModel" ngModel required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="label">Mật khẩu</label>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="group">      
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label class="label">Nhập lại mật khẩu</label>
+        </div>
+    </div>
+  </div>
+
+  <div class="group">      
+      <input type="text" name="Email" id="Email" #Email="ngModel" ngModel required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label class="label">Email</label>
+  </div>
+
+  <div class="group">      
+      <input type="text" #thamso name="DateOfBirth" #DateOfBirth="ngModel" id="DateOfBirth"
+      class="input datepicker-here"
+      data-language='vn'
+      data-multiple-dates="1"
+      data-multiple-dates-separator=", "
+      data-position='bottom left'
+      data-date-format="mm/dd/yyyy"
+      ngModel required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label class="label">Ngày sinh</label>
+  </div>
+
+  <div class="group">      
+      <input type="number" name="Phone" id="Phone" #Phone="ngModel" ngModel required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label class="label">Số điện thoại</label>
+  </div>
+
+  <div class="group">
+        <select #GroupID="ngModel" name="GroupID" required ngModel>
+            <option >Chọn nhóm</option>
+            <option *ngFor="let group of Groups" [value]="group.Id">{{group.Name}}</option>
+        </select>
+        <span class="bar"></span>
+        <label class="label">Nhóm</label>
+  </div>  
+
+  <button class="btnDangky mt-4 mb-5">Đăng ký</button>
+</form> -->
+
+
+
+</div>

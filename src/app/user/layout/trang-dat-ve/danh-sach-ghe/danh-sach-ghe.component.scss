@@ -1,0 +1,138 @@
+@import '../../../../../assets/styles/main.scss';
+
+#ChonGhe{
+    margin-top: 40px;
+    margin-left: -11px;
+}
+
+.screen{
+    margin-top: 30px;
+    width: 100%;
+}
+
+.timeleft{
+    color:$ColorFont;
+}
+.count{
+    color:#1cea2c;
+}
+
+
+.rowghe{
+    padding: 50px 20px;
+    width: 744px;
+    max-width: 744px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dsGhe{
+    background: #1c222e;
+    width: 97%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.nut{
+    background: none;
+    border: 1px solid #8e959e;
+    color: #8e959e;
+    padding: 7px;
+}
+
+.btndangtrong{
+    background: $ColorFont;
+}
+.btndangchon{
+    background: $ColorPrimary;
+    border: 1px solid $ColorPrimary;
+}
+
+.chuthich{
+    small{
+        color:$ColorFont;
+        margin-left: 12px;
+        margin-top: -1px; 
+    }
+}
+
+#chuthich{
+    padding: 0 13px;
+    margin-top: 20px;
+}
+
+.tungghe{
+    box-sizing: border-box;
+    margin: 5px 5px;
+}
+
+@media(max-width:1366px){
+    .rowghe{
+        max-width:616px;
+        width:616px;
+    }
+}
+
+@media(max-width:1024px){
+    .rowghe{
+        margin: 0 10px;
+        width: 507px;
+    }
+    .tungghe{
+        width: 36px;
+        margin: 2px 5px;
+    }
+}
+
+@media(max-width:768px){
+    .rowghe{
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+    }
+    .tungghe{
+        width:50px;
+    }
+}
+
+@media(max-width:414px){
+    .rowghe{
+        margin: 0;
+        padding:0;
+    }
+    .tungghe{
+       width: 23px;
+       margin-bottom: 0;
+
+    }
+    .chuthich{
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width:375px){
+    .tungghe{
+        margin-left: 4px !important;
+        width: 22px;
+    }
+}
+
+@media(max-width:320px){
+    .rowghe{
+        margin: 0 9px;
+    }
+    .tungghe{
+        width: 20px !important;
+    }
+}
+
+@media(max-width:360px){
+    .tungghe{
+        width: 23px;
+    }
+    .chuthich{
+        font-size: 65%;
+    }
+}

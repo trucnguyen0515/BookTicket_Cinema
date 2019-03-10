@@ -1,0 +1,44 @@
+<div id="ChonGhe">  
+
+    <!-- Man Hinh -->
+    <img class="screen" src="../../../../../assets/images/Screen Shot 2018-04-29 at 4.58.59 PM.png" alt="">
+
+    <!-- Danh Sach Ghe -->
+    <div class="dsGhe">
+        <div class="rowghe">
+            <ng-container *ngIf="dsGhe != null">
+            <div class="tungghe" *ngFor="let ghe of dsGhe.Seats">
+                            <app-ghe         
+                            (eventChonGhe)="ChonGheOutput($event,ghe.SeatName)"
+                            [ghe]="ghe"
+                            >
+                            </app-ghe><br/>
+            </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <!-- Chu Thich  -->
+    <div class="clearfix" id="chuthich">
+            <div class="float-left d-flex mt-3 chuthich">
+    
+                <div class="d-flex">
+                        <p class="nut btnduocdat"></p>
+                        <small>Đã Đặt</small>
+                </div>
+                <div class="ml-4 d-flex">
+                        <p class="nut btndangtrong"></p>
+                        <small>Đang Trống</small>
+                </div>
+                <div class="ml-4 d-flex">
+                        <p class="nut btndangchon"></p>
+                        <small>Đã Chọn</small>
+                </div>
+                
+            </div>
+            <div class="float-right"> 
+                <small class="timeleft">Time Left</small><br>
+                <span class="ml-4 count" id="counter"></span>
+            </div>
+        </div>   
+</div>

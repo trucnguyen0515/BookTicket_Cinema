@@ -1,0 +1,127 @@
+<div id="LichChieu">
+    <div class="container">
+        <h3 class="">LỊCH CHIẾU PHIM</h3>
+
+        <ng-template #oknguoclai>
+            <h5 class="soon">Comming Soon...</h5>
+        </ng-template>
+
+
+        <div class="row tableRow d-flex mt-2 pt-1 pb-1 pl-1" *ngIf="trangthai == true; else oknguoclai">
+
+                <div class="col-lg-3 col-md-4 tenrap">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+      
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#homecon">
+                                <img class="imgLogo" src="https://s3img.vcdn.vn/123phim/2017/11/433007c685123da4226af33de215e38a.png" alt=""><span class="nameCinema">Cinestar</span>
+                            </a>
+                        </li>
+      
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#menucon">
+                                <img class="imgLogo" src="https://s3img.vcdn.vn/123phim/2018/02/854e065ed5dfd5441965c99c5e197d56.png" alt=""><span class="nameCinema">Lotte Cinema</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menucon1">
+                                    <img class="imgLogo" src="https://s3img.vcdn.vn/123phim/2017/11/526c679660edac88b195a9008590b1e8.png" alt=""><span class="nameCinema">Mega GS</span>
+                                </a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menucon2">
+                                    <img class="imgLogo" src="https://s3img.vcdn.vn/123phim/2014/04/b216b21c3fbc33d5c60f2b504a7506cd.png" alt=""><span class="nameCinema">CGV Cinema</span>
+                                </a>
+                        </li>
+
+                        
+      
+                    </ul>
+                    <!-- Nav tabs -->
+                </div>
+      
+      
+                <div class="col-lg-2 col-md-3 diachirap">
+                    <!-- Tab panes 1 -->
+                    <div class="tab-content">
+      
+                        <div class="tab-pane active container" id="homecon">
+                            <ul class="nav nav-tabs">
+      
+                                <li class="nav-item ngaychieu" *ngFor="let ngaychieu of arrLichChieu, let i = index">
+                                   
+                                        <a class="nav-link" data-toggle="tab" href="#homechau{{i+1}}">{{ngaychieu.NgayChieu | date:'EEEE, MMMM d'}}</a>
+                                    
+                                </li>
+      
+      
+                            </ul>
+                        </div>
+      
+                        <div class="tab-pane container" id="menucon">
+                            <ul class="nav nav-tabs">
+      
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#menuchau1">July 11</a>
+                                </li>
+      
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#menuchau2">June 12</a>
+                                </li>
+      
+                            </ul>
+                        </div>
+      
+                    </div>
+                    <!-- Tab panes 1 -->
+                </div>
+      
+      
+      
+                <div class="col-lg-7 col-md-5 lichchieu">
+                    <div class="tab-content container divlichchieu">
+                        
+                        <ng-container *ngFor="let ngaychieu of arrLichChieu, let i = index">
+                        <div class="tab-pane container pl-0" id="homechau{{i+1}}">
+                                <a class="nav-link d-flex" data-toggle="tab" href="#">
+                                    <img class="imgAddress" src="https://s3img.vcdn.vn/123phim/2017/08/cinestar-hai-ba-trung-15021640992901.jpg" alt="">
+                                    <div class="ml-2 chitiet">
+                                        <b class="cns">CNS</b> - Hai Bà Trưng
+                                        <br>
+                                        <small>123 Hai Bà Trưng</small>
+                                    </div>
+                                </a>
+
+                                
+                                <div class="row thoigian">
+                                    <div class="col-2">
+                                        <img class="mt-2" src="http://www.123phim.vn/app/assets/img/icons/typeSession/2_0.png" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                            <ng-container *ngFor="let giochieu of ngaychieu.Suat">
+                                                <a target="_blank" class="thoigianchieu" (click)="DatVe(giochieu.ShowTimeID,ngaychieu.NgayChieu,giochieu.GioChieu,giochieu.TenRap)" >
+                                                    {{giochieu.GioChieu | slice:0:5}}
+                                                </a>
+                                            </ng-container>
+                                    </div>
+                                </div>   
+                        </div>
+                        </ng-container>
+
+      
+                        <div class="tab-pane container" id="menuchau1">Menu Chau 1</div>
+                        <div class="tab-pane container" id="menuchau2">Menu Chau 2</div>
+      
+                    </div>
+                </div>
+      
+      
+            </div>
+            <!-- row -->
+
+
+    </div>
+</div>

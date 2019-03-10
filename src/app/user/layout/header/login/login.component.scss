@@ -1,0 +1,184 @@
+@import '../../../../../assets/styles/main.scss';
+
+input,select,textarea{
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+a:hover{
+    color: white;
+}
+
+small{
+	color:white;
+}
+
+#Login
+{
+    padding: 45px 55px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 1200;
+}
+
+#dangnhap{
+    
+    color:silver;
+    padding: 0;
+    padding-top:30px;
+}
+#dangky{
+
+    color:silver;
+    padding: 0;
+    padding-top:30px;
+}
+
+a{
+    position: relative;
+    color:$ColorFont;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background:none;
+    color: white;
+    // border-bottom: 1px solid $ColorPrimary;
+    border-radius: 0;
+    padding: 0;
+}
+.nav-pills .nav-link{
+    padding: 0;
+}
+
+//Animation Spinner
+.spinner{
+	display: none;
+	@include spinner;
+}
+.cube1, .cube2{
+	@include cube12($ColorPrimary);
+}
+.cube2{
+	@include cube2;
+}
+//Animation Spinner
+
+
+
+.btnLogin{
+    @include btnlogin;
+}
+
+
+// Animation
+
+.group 			  { 
+	position:relative; 
+    margin-bottom:45px; 
+}
+
+input[type="text"], input[type="password"], input[type="number"],input[type="email"],input[type="phone"],select			{
+    color:white;
+	width: 100%;
+	background: none;
+	font-size:16px;
+	padding:5px 10px 5px 0px;
+	display:block;
+	border:none;
+	border-bottom:1px solid $ColorFont;
+}
+
+input:focus ,select:focus		{ outline:none; }
+
+.label 				 {
+	color: white; 
+	font-size:15px;
+	font-weight:normal;
+	position:absolute;
+	pointer-events:none;
+	left:0px;
+	top:5px;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+input:focus ~ .label, input:valid ~ .label, select:focus ~ .label, select:valid ~ .label 		{
+	top:-20px;
+	font-size:12px;
+	color:$ColorPrimary;
+	transition:all 0.4s ;
+}
+
+.bar 	{ position:relative; display:block; width:100%; }
+.bar:before, .bar:after 	{
+	content:'';
+	height:2px; 
+	width:0;
+	bottom:-1px; 
+	position:absolute;
+	background:$ColorPrimary; 
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+
+}
+.bar:before {
+	// left:50%;
+}
+.bar:after {
+	// right:50%; 
+}
+
+
+input:focus ~ .bar:before, input:focus ~ .bar:after, select:focus ~ .bar:before, select:focus ~ .bar:after {
+	// width:50%;
+	width: 100%
+}
+
+// /Animation
+
+
+
+
+.lbdangnhap::before{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 21px;
+    background: red;
+    right: -16px;
+    background: $ColorFont;
+    top: 2px;
+}
+
+
+// validate
+.thatbai{
+	@include thatbai;
+}
+.thatbai::after, .thatbai::before{
+	@include thatbaiAfterBefore;
+}
+.thatbai:focus ~ .label, .thatbai:valid ~ .label	{
+	@include thatbaiFocusLabel;
+}
+.loi{
+	@include loi;
+}
+.disablebtn{
+	@include disablebtn;
+}
+
+@media(max-width:414px){
+	#Login{
+        padding:35px 35px;
+    }
+}
+
+

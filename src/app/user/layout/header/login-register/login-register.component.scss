@@ -1,0 +1,99 @@
+@import '../../../../../assets/styles/main.scss';
+
+#LoginRegister{
+    color:white;
+    border: 2px solid #80d8d1;
+    padding: 8px 21px;
+    cursor: pointer;
+    font-size: 12px;
+
+}
+
+a{
+    transition: all 0.1s linear
+}
+
+a:hover{
+    color:$ColorPrimary !important;
+}
+
+
+//Modal
+.modal.left .modal-dialog {
+	position: fixed;
+	margin: auto;
+	width: 550px;
+	height: 100%;
+	-webkit-transform: translate3d(0%, 0, 0);
+	-ms-transform: translate3d(0%, 0, 0);
+	-o-transform: translate3d(0%, 0, 0);
+	transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content {
+    height: 100%;
+    border-radius: 0;
+	overflow-y: auto;
+}
+
+.modal.left .modal-body {
+	// padding: 15px 15px 80px;
+}
+
+.modal.left.fade .modal-dialog {
+	right: -550px;
+	-webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+	-moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+	-o-transition: opacity 0.3s linear, right 0.3s ease-out;
+	transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.left.fade.show .modal-dialog {
+	right: -1px;
+}
+
+
+.bodycontent{
+   // background: #16191f;
+   padding: 0;
+   background: url('../../../../../assets/images/cool-twitter-backgrounds.jpg');
+ /* Create the parallax scrolling effect */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: 100%;
+ height: 100%;
+ box-shadow: -1px 2px 23px 7px rgba(0, 0, 0, 0.4);
+ z-index: 1;
+
+}
+
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 45px 55px;
+    padding-bottom: 10px;
+  }
+
+.dong{
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1;
+    color: white;
+    opacity: .5;
+    position: absolute;
+    right: 1000;
+    right: 5px;
+    z-index: 5000;
+}
+
+
+
+@media(max-width:414px){
+	.modal-dialog{
+		width: 100% !important;
+    }
+    
+}

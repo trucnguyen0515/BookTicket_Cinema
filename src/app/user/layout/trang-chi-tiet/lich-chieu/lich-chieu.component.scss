@@ -1,0 +1,199 @@
+@import "../../../../../assets/styles/main.scss";
+#LichChieu {
+    color: white;
+    background:$ColorBackground;
+    @include paddingDiv;
+    padding-top: 0;
+    margin-bottom: 65px;
+
+    
+    .thoigianchieu{
+        display: inline-block;
+        border: 2px solid #81d8d0;
+        padding: 5px 20px;
+        margin-top: 9px;
+        cursor: pointer;
+        transition: all .1s linear;
+    }
+    .thoigianchieu:hover{
+        border: 2px solid $ColorSecondary;
+    }
+
+
+    .cns{
+        color: #662d91;
+    }
+
+    .overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: -1;
+    }
+ 
+    h3 {
+        padding-top: 0;
+        margin-top: 65px;
+        margin-bottom: 35px;
+        display: inline-block;
+        position: relative;
+    }
+
+    h3::before{
+        @include line();
+    }
+
+    .imgLogo {
+        width: 50px;
+        height: 50px;
+    }
+    .imgAddress {
+        width: 50px;
+        height: 50px;
+    }
+  
+    a {
+        padding-left: 0;
+        padding-right: 0;
+        padding: 15px 0;
+        color: white;
+    }
+    .chitiet {
+        color: white;
+    }
+    .tableRow {
+        margin: 0;
+        border: 1px solid $ColorFont;
+    }
+    .tenrap,
+    .diachirap,
+    .lichchieu {
+        border-right: 1px solid $ColorFont;
+
+    }
+    #GroupCinema {
+        background: black;
+        @include paddingDiv;
+        color: white;
+    }
+    .nav-tabs {
+        border: none !important;
+    }
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(142, 149, 158, 0.25);
+    }
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    .nav-tabs .nav-link.active,
+    .nav-tabs .show>.nav-link {
+        background: none;
+        opacity: 1;
+    }
+    .nav-tabs .nav-link {
+        opacity: 0.3;
+        transition: all 0.3s linear;
+        border: none;
+    }
+    .nav-tabs .nav-link:hover {
+        opacity: 1;
+    }
+
+    .nameCinema{
+        font-weight: 500;
+        padding-left: 10px;
+    }
+}
+
+
+.thoigian {
+    animation: slide-down 0.5s ease-out;
+
+    .col-2{
+        padding-right: 0;
+    }
+    .col-10{
+        padding-left: 0;
+    }
+}
+
+@keyframes slide-down {
+    0% { opacity: 0; transform: translateY(50%); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.soon{
+    color:$ColorFont;
+}
+
+
+@media(max-width:1024px){
+    .thoigianchieu{
+        margin-left:0px !important;
+    }
+    .thoigian {
+        .col-10{
+            padding: 0 !important;
+        }
+    }
+}
+
+@media(max-width:812px){
+    .thoigian .col-10{
+        margin-left: 16px;
+    }
+}
+
+@media(max-width:768px){
+    .thoigianchieu{
+        margin-left:30px !important;
+    }
+}
+
+@media(max-width:736px){
+    .thoigian .col-10{
+        margin-left: 0;
+    }
+    .thoigianchieu:last-of-type{
+        margin-left: 5px !important;
+    }
+    .lichchieu{
+        margin-bottom:40px;
+    }
+}
+
+@media(max-width:414px){
+    .tenrap{
+        border-bottom: 1px solid #8e959e !important;
+    }
+
+    #homecon{
+        padding: 0 !important;
+        margin: 20px 0 !important;
+    }
+    .diachirap{
+        border-bottom: 1px solid #8e959e !important;
+    }
+    .divlichchieu{
+        padding: 0 !important;
+        margin: 20px 0 !important;
+    }
+    .thoigian .col-10{
+        margin-left: 0;
+    }
+    .thoigianchieu:last-of-type{
+        margin-left: 5px !important;
+    }
+}
+
+@media(max-width:375px){
+    .thoigian .col-10{
+        margin-left: 0;
+    }
+    .thoigianchieu:last-of-type{
+        margin-left: 5px !important;
+    }
+}

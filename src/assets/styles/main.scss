@@ -1,0 +1,246 @@
+$ColorPrimary: #81d8d0;
+$ColorSecondary:#ea1c47;
+$ColorFont: #8e959e;
+$ColorBackground: #1a202c;
+$ColorBackground2:#1c222e;
+$ColorBackground3:#1f2531;
+$ColorBgLogin:#131923;
+
+// validate
+@mixin thatbai{
+	border-bottom: 1px solid $ColorSecondary !important; 
+}
+@mixin thatbaiAfterBefore{
+	background: $ColorSecondary !important;
+}
+@mixin thatbaiFocusLabel	{
+	color:$ColorSecondary !important;
+}
+@mixin loi{
+	color:$ColorSecondary !important;
+}
+@mixin disablebtn{
+  cursor: no-drop !important;
+}
+
+.bodycontent{
+  background-attachment: scroll !important;
+}
+
+
+@mixin line()
+{
+  content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: #81d8d0;
+    top: -10px;
+}
+
+
+
+// Animation Spinner
+@mixin spinner {
+  width: 35px;
+  position: relative;
+}
+
+@mixin cube12($color){
+  background-color:$color;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 0px;
+  left: -15px;
+  
+  -webkit-animation: sk-cubemove 1.4s infinite ease-in-out;
+  animation: sk-cubemove 1.4s infinite ease-in-out;
+}
+
+@mixin cube2 {
+  -webkit-animation-delay: -0.7s;
+  animation-delay: -0.7s;
+}
+
+@-webkit-keyframes sk-cubemove {
+  25% { -webkit-transform: translateX(12px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(12px) translateY(12px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(12px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes sk-cubemove {
+  25% { 
+    transform: translateX(12px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(12px) rotate(-90deg) scale(0.5);
+  } 50% { 
+    transform: translateX(12px) translateY(12px) rotate(-179deg);
+    -webkit-transform: translateX(12px) translateY(12px) rotate(-179deg);
+  } 50.1% { 
+    transform: translateX(12px) translateY(12px) rotate(-180deg);
+    -webkit-transform: translateX(12px) translateY(12px) rotate(-180deg);
+  } 75% { 
+    transform: translateX(0px) translateY(12px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(12px) rotate(-270deg) scale(0.5);
+  } 100% { 
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+// Animation Spinner
+
+
+
+@mixin parallax($url)
+{
+  /* The image used */
+  background-image: url($url);
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin aniLine
+{
+  content: '';
+  position: absolute;
+  width: 0;
+  left: 50%;
+  border-radius: 5px;
+  height: 1px;
+  bottom: 0;
+  background-color: $ColorPrimary;
+  transition: all ease-in-out .2s;
+}
+
+@mixin button($colorBG,$colorFont){
+    background: $colorBG;
+    padding: 10px 30px;
+    border: none;
+    color: $colorFont;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+@mixin btnlogin()
+{
+  background: transparent;
+  padding: 10px 30px;
+  border: 3px solid #81d8d0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: white;
+}
+
+@mixin buttonAni
+{
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: white;
+    border: 1px solid $ColorPrimary;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        color: white;
+        
+        background-color: $ColorPrimary;
+    
+        transition: all 0.2s ease-out;
+    
+        &:before {
+          animation: shine 0.5s 0s linear;
+        }
+      }
+
+      &:active {
+        box-shadow: 0 0 0 0 transparent;
+        transition:box-shadow 0.2s ease-in;
+      }
+    
+      &:before {
+        content: '';
+        display: block;
+        width: 0px;
+        height: 86%;
+        position: absolute;
+        top: 7%;
+        left: 0%;
+    
+        opacity: 0;
+        background: white;
+        box-shadow: 0 0 15px 3px white;
+        transform:skewX(-20deg);
+      }
+      
+      @keyframes shine{
+        from {
+          opacity: 0;
+          left: 0%;
+        }
+      
+        50% {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+          left: 100%;
+        }
+      }
+}
+
+
+
+@mixin paddingDiv
+{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+@mixin paddingTitle
+{
+    margin-bottom: 30px !important;
+}
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: none;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+a{
+  color: white;
+}
+a:hover{
+  color:$ColorPrimary;
+}

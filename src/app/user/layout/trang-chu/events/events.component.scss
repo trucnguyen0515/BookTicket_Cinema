@@ -1,0 +1,17 @@
+@import '../../../../../assets/styles/main.scss';
+
+#events{
+    color:white;
+    @include paddingDiv();
+    padding-top:0;
+
+    h3{
+        @include paddingTitle;
+        display: inline-table;
+        margin: 0 auto;
+        position: relative;
+    }
+    h3::before{
+        @include line();
+    }
+}

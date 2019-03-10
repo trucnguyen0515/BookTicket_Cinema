@@ -1,0 +1,108 @@
+@import './main.scss';
+
+
+
+
+.group 			  { 
+	position:relative; 
+    margin-bottom:45px; 
+}
+
+.mydp .selection{
+    background-color: transparent !important;
+    color:white !important;
+}
+
+input[type="text"], input[type="password"], input[type="number"],.selection			{
+    color:white;
+	width: 100%;
+	background: none;
+	font-size:16px;
+	padding:5px 10px 15px 0px;
+	display:block;
+	border:none;
+	border-bottom:1px solid $ColorFont;
+}
+
+input:focus,.selection:focus 		{ outline:none; }
+
+.label 				 {
+	color: white; 
+	font-size:15px;
+	font-weight:normal;
+	position:absolute;
+	pointer-events:none;
+	left:0px;
+	top:10px;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+input:focus ~ .label, input:valid ~ .label, .selection:focus ~ .label, .selection:valid ~.label 		{
+	top:-20px;
+	font-size:12px;
+	color:$ColorFont;
+	transition:all 0.4s ;
+}
+
+.bar 	{ position:relative; display:block; width:100%; }
+.bar:before, .bar:after 	{
+	content:'';
+	height:2px; 
+	width:0;
+	bottom:-1px; 
+	position:absolute;
+	background:$ColorPrimary; 
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	transition: all 0.4s;
+
+}
+.bar:before {
+	/* // left:50%; */
+}
+.bar:after {
+	/* // right:50%;  */
+}
+
+
+input:focus ~ .bar:before, input:focus ~ .bar:after, .selection:focus ~ .bar:before, .selection:focus ~ .bar:after {
+	/* // width:50%; */
+	width: 100%
+}
+
+/* // /Animation */
+
+
+
+
+
+
+.mydp .selectiongroup{
+    background-color: transparent !important;
+}
+
+.mydp, .mydp .headertodaybtn, .mydp .selection, .mydp .selectiongroup, .mydp .selector{
+    border-radius: 0px !important;
+}
+
+.mydp, .mydp .headertodaybtn{
+    border: none !important;
+    border-bottom:1px solid !important;
+    color:black !important;
+}
+
+.mydp .btnclear, .mydp .btndecrease, .mydp .btnincrease, .mydp .btnpicker, .mydp .headertodaybtn {
+    background: none !important;
+    border: 1px solid #8e959e !important;
+    color: white !important;
+}
+
+.mydp .btnpicker{
+    border-radius:0px !important;
+}

@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./assets/styles/main.scss";
+
+h3{
+  font-size: 1.30em !important;
+  color: white;
+}
+
+a {
+    text-decoration: none !important;
+    color: #fff;
+  }
+
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  button:focus,
+  .uneditable-input:focus {
+    border: none;
+    outline: 0 none;
+  }
+  
+  .form-group {
+    margin: 0;
+  }
+
+
+body{
+  background:$ColorBackground;
+}
+
+
+#dangchieu,#sapchieu {
+  .owl-prev,.owl-next{
+    color: white;
+    font-size: 50px;
+  }
+  .owl-theme .owl-nav [class*=owl-]:hover{
+    background: none; 
+  }
+  .owl-nav{
+    position: absolute;
+    top:0;
+    right: 0;
+    transform: translateY(-100px);
+  }
+  .no-js .owl-carousel, .owl-carousel.owl-loaded{
+    margin-top:60px;
+  }
+}
+
+@media (max-width:414px){
+  .owl-prev,.owl-next{
+    color: white;
+    font-size: 30px;
+  }
+  .owl-nav{
+    position: absolute;
+    top:0;
+    right: 50% !important;
+    transform: translateY(-100px) translateX(50%) !important;
+  }
+
+  .modal-backdrop{
+    z-index: 0 !important;
+  }
+}

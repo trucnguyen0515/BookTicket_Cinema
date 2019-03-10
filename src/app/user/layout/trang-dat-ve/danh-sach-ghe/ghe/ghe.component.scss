@@ -1,0 +1,87 @@
+@import '../../../../../../assets/styles/main.scss';
+
+.ghe{
+    width: 55px;
+    height: 55px;
+    border:none;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: $ColorFont;
+    color: none;
+    position: relative;
+    small{
+        position: absolute !important;
+        top:50% !important;
+        left:50% !important;
+        transform: translate(-50%,-50%) !important;
+    }
+}
+
+.duocdat{
+    background: none;
+    border: 1px solid $ColorFont;
+    color:$ColorFont;
+}
+
+.dachon{
+    background: $ColorPrimary;
+}
+
+@media(max-width:1366px){
+    .ghe{
+        width: 43px;
+        height: 45px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1024px){
+    .ghe{
+        height: 42px;
+
+        small{
+            font-size: 10px;
+        }
+    }
+}
+
+@media(max-width:768px){
+    .ghe{
+        height: 50px;
+        width: 54px;
+
+    }
+}
+
+@media(max-width:414px){
+    .ghe{
+        height: 28px;
+        width: 28px;
+
+       small{
+        position: relative;
+        top: -2px;
+         left: 0px;
+        font-size: 7px;
+       }
+    }
+}
+
+
+@media(max-width:320px){
+    .ghe{
+        height: 23px;
+        
+    }
+    small{
+        top: -1px !important;
+        left: -3px !important;
+        font-size: 6px !important;
+    }
+}
+
+@media(max-width:360px){
+    .ghe{
+        height: 25px;
+    }
+}

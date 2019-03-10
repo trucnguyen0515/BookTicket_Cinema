@@ -1,0 +1,91 @@
+@import '../../../../../assets/styles/main.scss';
+
+.disable {
+    cursor: no-drop;
+    opacity: 0.5;
+}
+
+
+#SoLuongVeDat{
+    max-width: 900px;
+    border:1px solid $ColorFont;
+    margin: 0 auto;
+}
+
+#chonSoLuong{
+    margin-top: 25px;
+    .ok{
+        border-top: 1px solid rgba(204, 204, 204, 0.18);
+        border-bottom: 1px solid rgba(204, 204, 204, 0.18);
+        padding: 35px 0;
+    }
+   
+    }
+
+.countnumber1,.countnumber2{
+    width: 40px;
+    padding-left: 10px;
+    margin: 0 10px;
+}
+
+table{
+    width: 100%;
+
+    .td1{
+        width: 50%;
+    }
+    .td2{
+        width: 30%;
+    }
+}
+
+.SoLuongVe small, .SoLuongCombo small{
+    color: $ColorFont;
+}
+
+
+.giatien1,.giatien2{
+    color: $ColorPrimary;
+}
+
+.giamsl1,.tangsl1,.giamsl2,.tangsl2{
+    cursor: pointer;
+}
+
+.btnclick{
+    @include button($ColorSecondary,white);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 0.2s linear;
+}
+
+.arrow{
+    position: relative;
+
+}
+
+.animRun{
+    animation: run 0.7s linear infinite;
+}
+
+@keyframes run {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+}
+
+
+.btnclick:hover{
+    opacity: 1;
+}
+
+.disable{
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+@media(max-width:1024px){
+    .count1,.count2{
+        margin-top:6px;
+    }
+}

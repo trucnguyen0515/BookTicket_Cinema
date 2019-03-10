@@ -1,0 +1,121 @@
+<div id="ThanhToan">
+    <div class="ThongTinThanhToan">
+
+        <form [formGroup]="formThanhToan" #FormThanhToan="ngForm">
+            
+                <div class="group">
+                        <select formControlName="PhuongThuc"
+                                name="PhuongThuc"
+                                ngModel
+                                required 
+                                [ngClass]="{'thatbai': PhuongThuc.invalid && (PhuongThuc.touched || PhuongThuc.dirty)}">
+                            <option disabled>Vui lòng chọn</option>
+                            <option>Thẻ ATM nội địa</option>
+                            <option>Thẻ VISA/MASTER/JCB</option>
+                        </select>
+                        <label class="label">Phương thức</label>
+                        <div class="bar" [ngClass]="{'thatbai': PhuongThuc.invalid && (PhuongThuc.touched || PhuongThuc.dirty)}"></div>
+                        <div class="loi mt-1" *ngIf="PhuongThuc.errors && (PhuongThuc.touched || PhuongThuc.dirty)">
+                            <p>Vui lòng chọn phương thức thanh toán!</p>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                            <input type="text"
+                                   formControlName="SoThe" 
+                                   name="SoThe"
+                                   ngModel
+                                   required
+                                   [ngClass]="{'thatbai': SoThe.invalid && (SoThe.touched || SoThe.dirty)}">
+                            <label class="label">Số thẻ</label>
+                            <div class="bar" [ngClass]="{'thatbai': SoThe.invalid && (SoThe.touched || SoThe.dirty)}"></div>
+                            <div class="loi mt-1" *ngIf="SoThe.errors && (SoThe.touched || SoThe.dirty)">
+                                <p>Không được để trống!</p>
+                            </div>
+                    </div>
+
+                    <div class="group">
+                            <input type="text"
+                                   formControlName="TenChuThe" 
+                                   name="TenChuThe"
+                                   ngModel
+                                   required
+                                   [ngClass]="{'thatbai': TenChuThe.invalid && (TenChuThe.touched || TenChuThe.dirty)}">
+                            <label class="label">Tên chủ thẻ</label>
+                            <div class="bar" [ngClass]="{'thatbai': TenChuThe.invalid && (TenChuThe.touched || TenChuThe.dirty)}"></div>
+                            <div class="loi mt-1" *ngIf="TenChuThe.errors && (TenChuThe.touched || TenChuThe.dirty)">
+                                <p>Không được để trống!</p>
+                            </div>
+                    </div>
+                    
+                    <div class="group">
+                            <input type="text"
+                                   formControlName="NgayHetHan" 
+                                   name="NgayHetHan"
+                                   ngModel
+                                   required
+                                   class="ngayhethan" (click)="ngayhethan()"
+                                   [ngClass]="{'thatbai': NgayHetHan.invalid && (NgayHetHan.touched || NgayHetHan.dirty)}">
+                            <label class="label">Ngày hết hạn</label>
+                            <div class="bar" [ngClass]="{'thatbai': NgayHetHan.invalid && (NgayHetHan.touched || NgayHetHan.dirty)}"></div>
+                            <div class="loi mt-1" *ngIf="NgayHetHan.errors && (NgayHetHan.touched || NgayHetHan.dirty)">
+                                <p>Không được để trống!</p>
+                            </div>
+                    </div>
+
+                    <div class="group">
+                            <input type="text"
+                                   formControlName="CVV" 
+                                   name="CVV"
+                                   ngModel
+                                   required
+                                   [ngClass]="{'thatbai': CVV.invalid && (CVV.touched || CVV.dirty)}">
+                            <label class="label">CVV/CVC2</label>
+                            <div class="bar" [ngClass]="{'thatbai': CVV.invalid && (CVV.touched || CVV.dirty)}"></div>
+                            <div class="loi mt-1" *ngIf="CVV.errors && (CVV.touched || CVV.dirty)">
+                                <p>Không được để trống!</p>
+                            </div>
+                    </div>        
+            
+                <!-- <div class="form-group mb-5">
+                        <select class="form-control">
+                            <option disabled>Chọn phương thức</option>
+                            <option>Thẻ ATM nội địa</option>
+                            <option>Thẻ VISA/MASTER/JCB</option>
+                        </select>
+                        <span class="bar"></span>
+                    </div>
+            
+                    <div class="group">      
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Số thẻ</label>
+                    </div>
+            
+                    <div class="group">      
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Họ tên chủ thẻ</label>
+                    </div>
+            
+                    <div class="group">      
+                        <input type="text" class="ngayhethan" (click)="ngayhethan()" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Ngày hết hạn</label>
+                    </div>
+            
+                    <div class="group">      
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>CVV/CVC2</label>
+                    </div>             -->
+        </form>
+
+
+        
+    </div>
+</div>

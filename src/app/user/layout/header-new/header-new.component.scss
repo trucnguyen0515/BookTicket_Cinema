@@ -1,0 +1,81 @@
+@import '../../../../assets/styles/main.scss';
+
+#HeaderNew{
+    background: $ColorBackground3;
+    box-shadow: 0px 2px 20px 3px rgba(0,0,0,0.75);
+    z-index: 2000;
+}
+
+.navbar-toggler{
+    border:1px solid $ColorPrimary;
+    border-radius: 0;
+}
+
+.navbar-toggler-icon{
+  
+}
+
+i{
+    color:white;
+    padding-top: 4px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+i:hover{
+    color:$ColorPrimary;
+}
+
+.navbar{
+    background: $ColorBackground3;
+    padding: 0;
+}
+
+.navbar-brand{
+    a{
+        color:$ColorPrimary;
+        font-size: 2.1em;
+        text-shadow: 0px 0px 10px $ColorPrimary;
+        cursor: pointer;
+    }    
+}
+.nav-link{
+    transition: all 0.2s;
+    cursor: pointer;
+    label{
+        cursor: pointer;
+        color: white;
+    }
+}
+.nav-link:hover{
+    color:$ColorPrimary;
+}
+
+
+
+.SearchPhim{
+    padding-left: 25px;
+}
+
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    font-weight: 500;
+}
+
+@media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    .navbar-expand-lg .navbar-nav{
+        padding-left:50px;
+    }
+}
+
+@media(max-width:1024px){
+    #navbarTogglerDemo02{
+      font-size: 13px !important;
+    }
+  }
+

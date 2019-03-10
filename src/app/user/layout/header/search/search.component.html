@@ -1,0 +1,48 @@
+<div class="SearchPhim">
+
+
+  <!-- Button to Open the Modal -->
+  <a class="icon" data-toggle="modal" data-target="#searchModal">
+    <i class="fas fa-search"></i>
+  </a>
+
+  <!-- The Modal -->
+
+  <div class="modal left fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body bodycontent">
+            <button type="button" class="close dong" data-dismiss="modal">&times;</button>
+            <div class="background">
+              </div>
+
+              <div id="SearchPhim">
+                  <h4 class="mb-5">Tìm kiếm</h4>
+                  <div class="group">
+                      <i class="fa fa-search iconSearchnha" aria-hidden="true"></i>
+                      <input class="inputSearch" (keyup)="SearchPhim()" type="text"
+                             required placeholder="Bạn muốn xem phim gì hôm nay?">
+                      <div class="bar"></div>
+                  </div>
+
+                  <div class="kqSearch" *ngIf="dschon != []">
+                    <div *ngIf="trangthai==false; else nguoclai">
+                    </div>
+                    <ng-template #nguoclai>
+                      <p class="kqsoluong mb-3">Tìm thấy {{dschon.length}} kết quả!</p> 
+                    </ng-template>
+                    <ng-container *ngFor="let kq of dschon">
+                        <div class="thongtinPhim" (click)="XemChiTiet(kq.ID,$event)">
+                            <span class="title">{{kq.Title}}</span>
+                        </div>
+                    </ng-container>
+                  </div>
+              </div>
+             
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

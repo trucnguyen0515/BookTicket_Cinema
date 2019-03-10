@@ -1,0 +1,72 @@
+<div id="MovieDetail">
+  
+  <div class="container">
+
+      <div class="row rowImage">
+              <img [src]="urlHost + MovieDetail.Image" class="img-fluid bgImage" [alt]="MovieDetail.Title" />
+              <div class="bgGradian"></div>
+          
+          <div class="col-md-5 col-12 infoimage">
+                  <img style="width:90% ; height:auto" [src]="urlHost + MovieDetail.Image" class="img-fluid imgMovie" [alt]="MovieDetail.Title" />
+          </div>
+
+          <div class="col-md-7 col-12 chitietphim" style="padding-top:40px; padding-left:20px;">
+
+              <div class="gioithieu">
+                  <h2>{{MovieDetail.Title}}</h2>
+                  <p class="description">{{MovieDetail.Description}}. Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea.</p>
+              </div>
+
+              <div class="thongtinphim">
+                  <ul class="list-unstyled">
+                      <li><span class="name">Đạo diễn</span>    <span class="valuename">{{MovieDetail.Director}}</span></li>
+                      <li><span class="name">Diễn viên</span>    <span class="valuename">{{MovieDetail.Producer}}</span></li>
+                      <li><span class="name">Thể loại</span>    <span class="valuename">{{MovieDetail.Genre}}</span></li>
+                      <li><span class="name">Đánh giá</span>    <span class="valuename">{{MovieDetail.Rating}}</span></li>
+                      <li><span class="name">Ngày chiếu</span>    <span class="valuename">{{MovieDetail.ReleaseDate | date:'longDate'}}</span></li>
+                      <li><span class="name">Thời lượng</span>    <span class="valuename">120 phút</span></li>
+                  </ul>
+              </div>
+
+              <div class="sukienbutton mt-5">
+                <button type="button" class="trailer" data-toggle="modal" data-target="#myModal2"  (click)="thongtin(MovieDetail.Title,MovieDetail.TrailerURI)">Xem Trailer</button>
+                <button href="#LichChieu" class="bookticket ml-3" appAniHover>ĐẶT VÉ NGAY</button>
+              </div>
+                  
+          </div>
+
+      </div>
+      <!-- row -->
+
+      <div class="lichchieu">
+
+      </div>
+      
+  </div>
+
+  <!-- The Modal -->
+<div class="modal fade" id="myModal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+    
+                <iframe class="video" *ngIf="urlPhim != null" height="600px" width="100%" [src]="urlPhim">
+                </iframe>
+                
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+    

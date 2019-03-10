@@ -1,0 +1,102 @@
+@import '../../../../../assets/styles/main.scss';
+
+#news{
+    color:white;
+    @include paddingDiv();
+    .img{
+        position: relative;
+    }
+    .banner{
+        width: 100%;
+    }
+ 
+}
+
+.bgcover{
+    position: absolute;
+    background: #00000038;
+    z-index: 1;
+    width: 100%;
+    height: 100%;    
+    top: 0;
+}
+
+h3{
+    @include paddingTitle;
+    padding-bottom: 7px;
+    display: inline-table;
+    margin: 0 auto;
+    position: relative;
+}
+h3::before{
+    @include line();
+}
+
+.blog{
+    margin-bottom: 15px;
+    img{
+      
+    }
+    h5{
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        margin-bottom: 8px;
+        text-transform: capitalize;
+        display: block;
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 58px;
+        line-height: 25px;
+    }
+    p{
+        color:$ColorFont;
+        margin-top: 17px;
+
+    }
+
+    .icon{
+        font-size:13px;
+        margin-top: 17px;
+    }
+    .likefb{
+        background: #365899;
+        padding: 1px 8px;
+        border-radius: 4px;    
+    }
+    .view{
+        background: #5d5f63;
+        padding: 1px 8px;
+        border-radius: 4px;
+    }
+}
+
+
+//repsonsive
+@media(max-width:414px){
+    .blog img{
+        height: 160px;
+        margin-right: 0px; 
+        width: 100%;
+    }
+    .blog h5{
+        margin-top: 13px;
+    }
+    .blogdienanh{
+        margin-top: 30px
+    }
+    .paddingright{
+        padding-right:15px !important;
+    }
+}
+
+@media(max-width:768px){
+    .titleblog h5{
+        margin-top:10px;
+    }
+}
+

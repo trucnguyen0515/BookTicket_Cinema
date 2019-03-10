@@ -1,0 +1,487 @@
+@import '../../../../assets/styles/main.scss';
+
+
+section {
+    color: white;
+}
+
+#TrangDatVe{
+    min-height: 100vh;
+}
+
+.body2{
+    color:white;
+    padding: 73px 0;
+}
+.TongTien{
+    color:white;
+    z-index: 1;
+}
+
+.bodyTrangDatVe {
+    background: $ColorBackground;
+    position: relative;
+    z-index: 0;
+    top: 70px;
+
+}
+
+.divpadding{
+    padding: 0 137px;
+}
+
+.headerDatVe{
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    transition: all .2s linear;
+    padding: 0 30px;
+
+}
+
+
+.bodycontent {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    padding-right:50px;
+}
+
+
+
+.QuayLai {
+    cursor: pointer;
+    padding-top: 9px;
+    color: $ColorFont;
+    display: block;
+    span {
+        margin-left: 10px;
+        font-weight: 300;
+    }
+}
+
+.nav {
+    margin-left: 67px;
+}
+
+
+.TaiKhoan {
+    cursor: pointer;
+    color: $ColorFont;
+    span {
+        margin-left: 10px;
+        font-weight: 300;
+    }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background: none; // font-size: 1.2em;
+    padding: 0;
+    padding-top: 10px;
+    border-bottom: 2px solid $ColorPrimary;
+    border-radius: 0;
+    padding-bottom: 45px;
+
+}
+
+.nav-link {
+    padding: 0;
+    color: $ColorFont;
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 45px;
+
+}
+
+.nav-item {
+    margin-right: 70px;
+}
+
+a {
+    transition: all 0.2s linear;
+}
+
+
+
+//Animation Spinner
+.spinner{
+	display: none;
+    @include spinner;
+    left: 100px;
+}
+.cube1, .cube2{
+	@include cube12(white);
+}
+.cube2{
+	@include cube2;
+}
+//Animation Spinner
+
+
+
+
+//Aniamtion tab panel
+.tab-pane, .tab-content{
+    overflow: hidden;
+}
+.tab-pane.active {
+    animation: slide-down3 1s ease-out;
+}
+
+@keyframes slide-down3 {
+    0% { opacity: 0; transform: translateY(-20%); }
+    100% { opacity: 1; transform: translateY(0%); }
+}
+
+// Background 
+
+.imgOk {
+    position: absolute;
+    opacity: 1;
+    z-index: -2;
+    right: 15%;
+    width: 70%;
+    height: 1400px;
+    top: -600px;
+}
+
+.bgGuardian {
+    right: 15%;
+    width: 100%;
+    height: 1400px;
+    top: -600px;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(26,32,44,0) 0%, rgba(26,32,44,0) 42%, rgba(26,32,44,1) 62%, rgba(26,32,44,1) 100%); /* w3c */
+    /* w3c */
+}
+
+.bgGuardian1 {
+    right: 15%;
+    width: 70%;
+    height: 1400px;
+    top: -600px;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(270deg, rgba(26,32,44,0) 0%, rgba(26,32,44,0) 40%, rgba(26,32,44,1) 96%, rgba(26,32,44,1) 100%); /* w3c */
+    /* w3c */
+}
+
+.bgGuardian2 {
+    right: 15%;
+    width: 70%;
+    height: 1400px;
+    top: -600px;
+    position: absolute;
+    z-index: 1;
+    
+    background: linear-gradient(90deg, rgba(26,32,44,0) 0%, rgba(26,32,44,0) 40%, rgba(26,32,44,1) 96%, rgba(26,32,44,1) 100%); /* w3c */
+    /* w3c */
+}
+
+.bgGuardian3 {
+    right: 15%;
+    width: 70%;
+    height: 1400px;
+    top: -600px;
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(0deg, rgba(26,32,44,0) 0%, rgba(26,32,44,0) 40%, rgba(26,32,44,1) 96%, rgba(26,32,44,1) 100%); /* w3c */
+    /* w3c */
+}
+.bgGuardian4 {
+    right: 15%;
+    width: 70%;
+    height: 1400px;
+    top: -600px;
+    position: absolute;
+    z-index: 1;
+    background:  rgba(26,32,44,0.8)
+    /* w3c */
+}
+
+.bgGuardian5{
+    position: absolute;
+    width: 95%;
+    height: 424px;
+    top: -71px;
+    left: 0;
+    background: linear-gradient(270deg, rgba(26,32,44,0) 0%, rgba(26,32,44,0) 50%, rgba(26,32,44,1) 67%, rgba(26,32,44,1) 100%);
+}
+
+.bgGuardian6{
+    position: absolute;
+    width: 95%;
+    height: 465px;
+    top: -77px;
+    right: 0;
+    background: linear-gradient(90deg, rgba(26,32,44,0) 0%, rgba(26,32,44,0) 50%, rgba(26,32,44,1) 71%, rgba(26,32,44,1) 100%);
+}
+
+.disable {
+    pointer-events: none;
+    opacity: 0.4 !important;
+}
+.disable2 {
+    pointer-events: none;
+    opacity: 0.4 !important;
+}
+
+// Tinh Tong Tien
+
+#TongTienCom{
+    box-shadow: -1px 2px 20px -1px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: auto;
+    padding: 20px 30px 36px;
+    background: #0000005e;
+}
+
+.imgTongTien img{
+    width: 100%;
+    height: 500px;
+    box-shadow: -1px 2px 23px 7px rgba(0,0,0,0.4);
+}
+
+.imgTongTien{
+    position: relative;
+
+}
+
+.background{
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    z-index: 1;
+}
+
+.trailer{
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    small{
+        display: block;
+        margin-top: 15px;
+        color:$ColorFont;
+    }
+}
+
+
+.TongTienThanhToan{
+    p{
+        color:$ColorFont;
+        font-size: 1.1rem;
+    }
+
+    .SoLuongVe,.Combo,.TenGhe{
+        margin-top: 25px;
+    }
+
+    .qttVe, .qttCombo{
+        margin-right: 80px;
+    }
+
+    .line::after{
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #262c38;
+        display: block;
+        margin-top: 30px;
+    }
+
+
+
+    .kqTongTien{
+        margin-top: 10px;
+        .kqTong{
+            font-size: 1.5rem;
+        }
+        .labelTong{
+            color:$ColorSecondary;
+        }
+    }
+
+    .price{
+        width: 61px;
+        text-align: right;
+    }
+        
+}
+
+.label{
+    color: $ColorFont;
+}
+
+
+.ThanhToan,.ThanhToan2{
+    @include button($ColorSecondary,white);
+    margin-top: 35px;
+    width: 100%;
+    padding: 15px 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.ThanhToan:hover,.ThanhToan2:hover{
+    opacity: 1;
+}
+
+
+
+
+
+//Reponsive
+
+@media(max-width:1366px){
+    .TongTienThanhToan .qttVe, .TongTienThanhToan .qttCombo{
+        margin-right:0 !important;
+    }
+}
+
+
+
+
+
+@media(max-width:1024px)
+{
+    #headerDatVe{
+        font-size: 80%;
+    }
+    .divpadding{
+        padding:0;
+    }
+    .body2{
+        .col-1{
+            display: none;
+        }
+        
+        .bodycontent{
+            padding-left: 20px;
+            padding-right: 0;
+        }
+       
+    }
+    .TaiKhoan{
+       
+    }
+    .QuayLai{
+        padding-left:5px;
+    }
+    .nav-item{
+        margin-right: 50px;
+    }
+    .nav-link{
+        padding-bottom: 38px !important;
+    }
+
+    #TongTienCom{
+        width: 372px;
+    }
+}
+
+@media(max-width:812px){
+    #TongTienCom{
+        margin:0 auto;
+    }
+    .TongTienThanhToan .price{
+        width: 110px;
+    }
+}
+
+@media(max-width:768px){
+    .divpadding{
+        padding:0;
+    }
+    .nav-link{
+        font-size: 12px;
+    }
+    .body2{
+        .col-xl-8{
+            min-height: 673px !important;
+        }
+    }
+    .TongTien{
+        max-width: 100% !important;
+        padding: 0 200px !important;
+        margin-top: 70px;
+        
+        .container-fluid{
+            padding:0;
+        }
+    }
+
+    .QuayLai{
+        width: 85px;
+    }
+    .nav{
+        margin-left: 10px;
+    }
+    .nav-link{
+        font-size: 12px;
+    }
+    .nav-item{
+        margin-right: 25px;
+    }
+    .TaiKhoan{
+        font-size: 10px;
+    }
+
+}
+
+@media (max-width:414px){
+    #myTab{
+        display: none;
+    }
+    .TaiKhoan{
+        padding-right:0px;
+    }
+  
+    .body2{
+        padding:30px 0;
+        .col-xl-8{
+            min-height: 600px !important;
+        }
+    }
+    .TongTien{
+        padding: 0 30px !important;
+        padding-left: 50px !important;
+        margin-top: 48px !important;
+    }
+    #headerDatVe{
+        padding: 0 !important;
+        padding: 10px 28px !important;
+    }
+    #TongTienCom{
+        width:100%
+    }
+}
+
+@media(max-width:375px){
+    .body2{
+        .col-xl-8{
+            min-height: 600px !important;
+        }
+    }
+    .TongTienThanhToan .price{
+        width: 80px;
+    }
+}
+
+@media(max-width:320px){
+    #TrangDatVe{
+        font-size: 70%;
+    }
+    .qttVe, .qttCombo{
+        margin-right: 50px !important;
+    }
+}
+
+
+
+

@@ -1,0 +1,114 @@
+@import "../../../../../assets/styles/main.scss";
+
+.cns{
+    color: #662d91;
+}
+.lotte{
+    color: #ed1b25;
+}
+.btnchitiet{
+    color: $ColorPrimary;
+}
+
+.thoigianchieu{
+    display: inline-block;
+    border: 1px solid #81d8d0;
+    padding: 5px 20px;
+    margin-left: 10px;
+    margin-top: 9px;
+}
+.nameCinema{
+    padding-left: 10px;
+}
+
+.divthongtin{
+    border-bottom: 1px solid rgba(142, 149, 158, 0.25);
+}
+
+.rowtable{
+    border:none !important;
+}
+
+.imgLogo{
+    width: 50px;
+    height: 50px;
+}
+
+.imgAddress{
+    width: 65px;
+    height: 65px;
+}
+
+h3{
+    @include paddingTitle;
+    padding-bottom: 7px;
+    display: inline-table;
+    margin: 0 auto;
+    position: relative;
+}
+
+h3::before{
+    @include line();
+}
+
+a{
+    padding-left: 0;
+    padding-right: 0;
+    padding: 15px 0;
+    color:white;
+}
+
+.chitiet{
+    color: white;
+}
+
+.row{
+    margin: 0;
+    border: 1px solid $ColorFont;
+}
+.tenrap, .diachirap, .lichchieu{
+    border-right: 1px solid $ColorFont;
+}
+
+.lichchieu{
+    height: 500px;
+}
+
+#GroupCinema{
+    background: $ColorBackground;
+    @include paddingDiv;
+    color:white;
+}
+.nav-tabs{
+    border: none !important;
+}
+.nav-item{
+    width: 100%;
+    border-bottom: 1px solid rgba(142, 149, 158,0.25);
+}
+
+.nav-item:last-child{
+    border-bottom: none !important;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .show>.nav-link{
+    background: none;
+    opacity: 1;
+}
+
+
+.nav-tabs .nav-link{
+    opacity: 0.3;
+    transition: all 0.3s linear;
+    border:none;
+}
+
+.nav-tabs .nav-link:hover{
+    opacity: 1;
+}
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    color:white;
+}
+

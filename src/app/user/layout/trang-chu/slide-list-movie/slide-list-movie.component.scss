@@ -1,0 +1,257 @@
+@import "../../../../../assets/styles/main.scss";
+
+
+.modal-dialog{
+    width: 98%;
+    margin: 4px;
+}
+
+button.close{
+    font-size: 33px;
+}
+
+
+.modal-content{
+    background: none;
+}
+.modal-body{
+    padding:0 !important;
+}
+.modal-header{
+    border:0;
+}
+button.close {
+    text-shadow: none;
+    color: white;
+    font-size: 40px;
+    background: none;
+    opacity: 1;
+    z-index: 1000;
+    margin-top: -40px;
+
+}
+.modal-footer{
+    border-top: none;
+}
+
+.video{
+    border: 1px solid black;
+}
+
+
+a{
+    transition: all .2s linear;
+}
+
+img{
+   width: 98%;
+   height: 350px;
+}
+
+a:hover{
+    color: $ColorPrimary;
+}
+
+// Title
+#SlideListMovie{
+    // background: url('../../../../../assets/images/backapp.jpg');
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background: $ColorBackground;
+    @include paddingDiv;
+    padding-bottom: 0;
+}
+.nav{
+    @include paddingTitle;
+    font-size: 1.35em;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.nav-link{
+    padding: 0;
+    font-size: 20px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background: none;
+    // color: $ColorPrimary;
+    border-radius: 0;
+    padding-bottom: 7px;
+    position: relative;
+}
+
+
+
+
+
+// Line
+.nav-item{
+    position: relative;
+    margin: .5rem 0;
+    margin-right: 30px;
+}
+
+.linkDangChieu.active::before{
+   @include line();
+}
+
+.linkSapChieu.active::before{
+    @include line();
+
+}
+
+
+
+
+//Slide Movie
+.imgMovie{   
+    // height: 350px;
+  
+    // height: 410px;
+    color: white;
+}
+
+h5{
+    
+    font-size: 1.20rem;
+}
+
+
+.imgMovie div{
+    // height: 350px;
+}
+
+
+//overplay
+.imageHover{
+    position: relative;
+}
+.overplay{
+    transition: all .3s ease-in-out;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100% ;
+    background: rgba(0, 0, 0, 0.85);
+}
+.overplay:hover{
+    opacity: 1;
+}
+
+button{
+    cursor: pointer;
+}
+button.chitietphim{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 65%;
+    @include buttonAni;
+    @include button(none,white);
+    border: 2px solid $ColorPrimary;
+}
+
+button.datve{
+    background: $ColorSecondary;
+    position: absolute;
+    top: 48%;
+    left: 18%;
+    width: 65%;
+    border: 2px solid $ColorSecondary;
+    color: white;
+    padding: 6px 0;
+}
+
+//imdb
+// .tuoi{
+//     border-radius: 7px;
+//     font-weight: 600;
+//     font-size: 13px;
+//     margin-top: 16px;
+//     margin-right: 5px;
+//     padding: 2px 5px;
+//     height: 23px;
+//     background: #ea1c47;
+// }
+
+.ok1,.ok2{
+    font-size: 75%;
+    padding-top: 10px;
+}
+.imdb{
+    padding: 1px 4px;
+    background: $ColorFont;
+    height: 19px;
+    color: #1a202c;
+    font-weight: 700;
+    margin-top: 16px;
+}
+.time{
+    color: silver;
+}
+
+.fas{
+    color:$ColorFont;
+}
+
+.tab-pane{
+}
+
+
+
+
+//responsive
+@media(max-width:1024px){
+    .imageHover{
+        img{
+            height: 320px;
+        }
+    }
+}
+
+/* Modal */
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 1000px;
+        margin: 1.75rem auto;
+    }   
+}
+
+@media(max-width:414px){
+    .modal-content{
+        height: 658px;
+    }
+    #SlideListMovie{
+        padding-top: 40px;
+    }
+    .tab-content{
+        margin-left: 9px;
+    }
+    .imgMovie{
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+    .nav-item{
+        margin-right: 0;
+        width: 50%;
+        text-align: center;
+    }
+    .nav-link{  
+        font-size: 16px;
+    }
+}
+
+@media(max-width:414px){
+    .imageHover{
+        img{
+            height: 250px;
+            width: 90%;
+        }
+    }
+}
+

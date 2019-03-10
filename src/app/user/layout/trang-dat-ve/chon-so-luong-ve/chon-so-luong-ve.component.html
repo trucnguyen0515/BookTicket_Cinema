@@ -1,0 +1,56 @@
+<div id="chonSoLuong">
+    <div class="ok">
+
+        <div class="SoLuongVe">
+        <table>
+            <tr class="clearfix">
+                <td class="td1">               
+                     <label class="text-center">Vé người lớn</label><br>
+                     <small>(Vé 2D)</small>
+                </td>
+                <td class="td2">                
+                    <label class="giatien1">{{GiaVe}}.000</label>
+                </td>
+                <td class="float-right"> 
+                    <div class="count1 d-flex">
+                        <i class="fas fa-minus giamsl1 pt-2" (click)="giamsl1()"></i>
+                        <input class="countnumber1" type="number" disabled [value]="SoLuongVe">
+                        <i class="fas fa-plus tangsl1 pt-2" (click)="tangsl1()"></i>
+                    </div>
+                </td>
+            </tr>
+        </table> 
+        </div>
+
+        <div class="SoLuongCombo mt-5">
+       <table>
+           <tr class="clearfix">
+                <td class="td1">
+                    <label class="text-center">Combo 1</label><br>
+                    <small>(1 Bắp + 1 Nước)</small>
+                </td>
+                <td class="td2">
+                    <label class="giatien2">{{GiaCombo}}.000</label>
+                </td>
+                <td class="float-right">
+                        <div class="count2 d-flex">
+                                <i class="fas fa-minus giamsl2 pt-2" (click)="giamsl2()"></i>
+                                <input class="countnumber2" type="number" disabled [value]="SoLuongCombo">
+                                <i class="fas fa-plus tangsl2 pt-2" (click)="tangsl2()"></i>
+                        </div>
+                </td>
+           </tr>
+       </table>
+            
+        </div>
+
+    </div>
+
+
+    <div class="mt-5">
+        <button class="btnclick mt-2" (click)='next()'>Chọn Ghế <i class="fas fa-arrow-right ml-2 arrow"></i></button>
+    </div>
+</div>
+
+
+

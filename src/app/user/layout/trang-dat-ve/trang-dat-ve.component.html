@@ -1,0 +1,156 @@
+<div id="TrangDatVe">
+
+    <div id="headerDatVe" class="headerDatVe d-flex pt-3 container-fluid">
+
+        <!-- Button Quay lai -->
+        <div class="QuayLai" (click)="quaylai()">
+            <i class="fas fa-chevron-left"></i>
+            <span>Back</span>
+        </div>
+
+        <!-- Nav pills -->
+        <ul class="nav nav-pills" id="myTab">
+            <li class="nav-item">
+                <a class="nav-link menu1 active" (click)="previous()" data-toggle="pill" href="#home">1. CHỌN VÉ +
+                    COMBO</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link menu2" data-toggle="pill" href="#menu1">2. CHỌN GHẾ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link menu3" data-toggle="pill" href="#menu2">3. THANH TOÁN</a>
+            </li>
+        </ul>
+
+        <!-- Button Dang Nhap -->
+        <div class="TaiKhoan ml-auto">
+            <app-login-register2></app-login-register2>
+        </div>
+
+
+
+    </div>
+    <!-- Header -->
+
+    <div class="bodyTrangDatVe">
+
+
+        <img class="imgOk" [src]="urlHost + imgMovie">
+        <div class="bgGuardian"></div>
+        <!-- <div class="bgGuardian1"></div> -->
+        <!-- <div class="bgGuardian2"></div> -->
+        <div class="bgGuardian3"></div>
+        <div class="bgGuardian4"></div>
+        <div class="bgGuardian5"></div>
+        <div class="bgGuardian6"></div>
+
+        <div class="divpadding">
+            <div class="row body2 mr-0">
+            <div class="col-xl-8 col-lg-7" style="min-height:800px">
+                <div class="container-fluid">
+                    <div class="bodycontent">
+
+
+                        <!-- Thong tin chi tiet lich chieu -->
+                        <app-detail-showtime></app-detail-showtime>
+
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="home">
+
+
+                                <!-- Chon so luong ve -->
+                                <app-chon-so-luong-ve (LaySoLuongVe)='GetQtyVe($event)' (LaySoLuongCombo)='GetQtyCombo($event)'></app-chon-so-luong-ve>
+
+
+                            </div>
+                            <div class="tab-pane" id="menu1">
+
+                                <!-- Danh Sach Ghe -->
+                                <app-danh-sach-ghe [SoLuongVe]="SoLuongVe" (Loi)="CheckLoi($event)" (ThongTinGhe)="thongtinghe($event)"></app-danh-sach-ghe>
+
+                            </div>
+                            <div class="tab-pane" id="menu2">
+
+                                <!-- Thanh Toan -->
+                                <app-thanh-toan (ThongTinThanhToan)="ThongTinThanhToan($event)" (TenNguoiGD)="TenNguoiGD($event)"></app-thanh-toan>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 TongTien">
+                <div class="container-fluid">
+
+
+                    <!-- Tinh Tong Tien -->
+                    <div id="TongTienCom">
+                        <!-- <div class="imgTongTien">
+                            <div class="background"></div>
+                            <img class="imgTongTien" [src]="urlHost + imgMovie" alt="">
+                        </div> -->
+
+                        <div class="TongTienThanhToan">
+
+                            <div class="SoLuongVe  clearfix">
+                                <span class="float-left label">Số lượng vé</span>
+                                <span class="float-right price" *ngIf="GiaVe == 0; else NguocLai">{{GiaVe}}</span>
+                                <ng-template #NguocLai>
+                                    <span class="float-right price">{{GiaVe}}.000</span>
+                                </ng-template>
+                                <span class="float-right qttVe">{{SoLuongVe}}</span>
+                            </div>
+
+                            <div class="Combo clearfix">
+                                <span class="float-left label">Số lượng combo</span>
+                                <span class="float-right price" *ngIf="GiaCombo == 0; else NguocLai2">{{GiaCombo}}</span>
+                                <ng-template #NguocLai2>
+                                    <span class="float-right price">{{GiaCombo}}.000</span>
+                                </ng-template>
+                                <span class="float-right qttCombo">{{SoLuongCombo}}</span>
+                            </div>
+
+                            <div class="TenGhe clearfix">
+                                <span class="float-left label">Ghế ngồi</span>
+                                <span class="float-right" *ngIf="dsThongTinGhe == undefined; else DaChonGhe">
+                                    <label class="float-right m-0">Chưa chọn</label>
+                                </span>
+                                <ng-template #DaChonGhe>
+                                    <label class="float-right m-0" *ngFor="let kq of dsThongTinGhe">{{kq.SeatName}}</label>
+                                </ng-template>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="kqTongTien clearfix">
+                                <span class="float-left labelTong mt-2">TỔNG CỘNG</span>
+                                <span class="float-right kqTong" *ngIf="TongTien == 0; else NguocLai3">{{TongTien}}</span>
+                                <ng-template #NguocLai3>
+                                    <span class="float-right kqTong">{{TongTien}}.000</span>
+                                </ng-template>
+                            </div>
+
+                            <button class="ThanhToan" (click)="thanhtoan()">THANH TOÁN</button>
+                            <button class="ThanhToan2" (click)="thanhtoan2()">
+                                <div class="spinner">
+                                    <div class="cube1"></div>
+                                    <div class="cube2"></div>
+                                </div>
+                                THANH TOÁN
+                            </button>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,266 @@
+@import "../../../../assets/styles/main.scss";
+
+
+/* Header Top */
+
+.headerleft li{
+  margin-right: 33px;
+  padding-bottom: 7px;
+}
+
+.headerright li{
+  padding-bottom: 7px;
+}
+
+
+.link1 li {
+  padding: 10px 15px;
+}
+
+#headerTop {
+  padding-top: 15px;
+  padding-bottom: 3px;
+  background: $ColorBackground;
+  z-index: 1;
+  width: 100%;
+  margin-bottom: -2px;
+}
+
+#headerTop a {
+  color: $ColorFont;
+}
+
+#headerTop i {
+  padding-right: 4px;
+}
+
+#headerTop .col-md-6 {
+  padding-top: 10px;
+}
+
+// animation line bottom
+#headerTop li {
+  position: relative;
+}
+
+#headerTop li::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  left: 50%;
+  border-radius: 5px;
+  height: 1px;
+  bottom: 0;
+  background-color: $ColorPrimary;
+  transition: all ease-in-out .2s;
+}
+
+#headerTop li:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.link2 li {
+  padding: 10px 15px !important;
+}
+
+.link2 li {
+  position: relative;
+}
+
+.link2 li::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  left: 50%;
+  border-radius: 5px;
+  height: 3px;
+  bottom: 0;
+  background-color: $ColorPrimary;
+  transition: all ease-in-out .2s;
+}
+
+.link2 li:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Logo */
+
+.brand{
+  background: $ColorBackground;
+}
+
+#logoMovie {
+  padding-top: 30px;
+  padding-bottom:30px;
+  display: block;
+  width: 100%;
+  color: $ColorPrimary;
+  text-shadow: 0px 0px 10px $ColorPrimary;
+}
+
+#logoMovie h1 {
+    position: relative;
+    top: 0;
+}
+
+#logoMovie small {
+    position: relative;
+    top: -13px;
+    left: 4px;
+    letter-spacing: 5px;
+}
+
+
+#logoMovie h1 {
+  font-size: 3em;
+}
+
+#logo2{
+  opacity: 0;
+}
+
+#logoMovie2 {
+  display: block;
+  width: 100%;
+  color: $ColorPrimary;
+  text-shadow: 0px 0px 10px $ColorPrimary;
+  height: 57px;
+}
+
+.showLogo{
+  display: block;
+  color: $ColorPrimary;
+  text-shadow: 0px 0px 10px $ColorPrimary;
+  animation: myanim 0.5s linear forwards;
+  height: 61px;
+  width: 110px;
+}
+
+@keyframes myanim {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#logoMovie2 h1 {
+    position: relative;
+    top: 0;
+    font-size: 2em;
+}
+
+#logoMovie2 small {
+    position: relative;
+    top: -13px;
+    letter-spacing: 1.2px;
+    font-size: 70%
+}
+
+
+/* Navbar */
+
+.menu{
+  // border: 2px solid $ColorPrimary;
+}
+
+.navbarMenu {
+    width: 103%;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100%;
+}
+
+.navbar {
+  padding: 5px 0;
+  width: 100%;
+  background: $ColorBackground3;
+}
+
+#myNavbar {
+  position: relative;
+  padding: 5px 0;
+}
+
+
+#Search{
+  position: absolute;
+  right: 0;
+  top: 18px;
+}
+
+#myNavbar a {
+  color: white;
+}
+
+#myNavbar li {
+  position: relative;
+  display: inline-block;
+}
+
+#myNavbar a:hover {
+  color: $ColorPrimary;
+  transition: all 0.1s linear;
+}
+
+.navbar i {
+  color: $ColorPrimary;
+}
+
+.navbar .navbar-nav {
+  width: 92%;
+}
+
+.navbar li.nav-item {
+  padding: 5px 21px;
+}
+
+.navbar li.nav-item>a {
+  font-weight: 500;
+}
+
+.navbar #sidebarCollapse span {
+  width: 30px;
+  height: 3px;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  display: block;
+  background: white;
+  transition: all 0.8s cubic-bezier(0.81, -0.33, 0.345, 1.375);
+}
+
+.navbar #sidebarCollapse.active span:nth-of-type(1) {
+  transform: rotate(315deg) translate(-9px, 9px);
+}
+
+.navbar #sidebarCollapse.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.navbar #sidebarCollapse.active span:nth-of-type(3) {
+  transform: rotate(-315deg) translate(-6px, -6px);
+}
+
+/* Search Icon */
+
+#login {
+  cursor: pointer;
+}
+
+.searchInput {
+  border: none;
+  width: 245px;
+}
+
+.searchInput:focus {
+  border: none !important;
+}
+
+.form-inline {
+  width: 250px !important;
+}
+
+
+

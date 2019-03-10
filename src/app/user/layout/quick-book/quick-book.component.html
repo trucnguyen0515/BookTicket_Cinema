@@ -1,0 +1,114 @@
+<div id="BookNhanh">
+    <div class="color clearfix">
+      <div class="float-left colorchinh">
+        <div class="triangle-down"></div>
+        <h5 class="labelbook text-right">QUICK BOOKING</h5>
+      </div>
+
+      <div class="float-right colorphu">
+        <div class="dong clearfix">
+          <form [formGroup]="formBooking" #FormBooking="ngForm">
+              <div class="group float-left">
+                  <select required  formControlName="TenRap" name="TenRap" ngModel>
+                      <option selected disabled>Chọn rạp</option>
+                        <option class="pt-5" *ngFor="let rap of dsrap" [value]="rap.ten">{{rap.ten}}</option>
+                  </select>
+                  <label class="label">Tên Rạp</label>
+                  <div class="bar"></div>             
+              </div>
+              <div class="group float-left">
+                  <select required formControlName="TenPhim" name="TenPhim" ngModel>  
+                      <option selected disabled>Chọn Phim</option> 
+                      <option *ngFor="let phim of dsphim" [value]="phim.ID">{{phim.Title}}</option>
+                  </select>
+                  <label class="label">Tên Phim</label>
+                  <div class="bar"></div>             
+              </div>
+              <div class="group float-left">
+                  <select required formControlName="NgayChieu" name="NgayChieu" ngModel> 
+                      <option selected disabled>Chọn Ngày</option>  
+                      <option *ngFor="let ngay of arrLichChieu" [value]="ngay.NgayChieu">{{ngay.NgayChieu | date:'EEEE, MMMM d'}}</option>
+                  </select>
+                  <label class="label">Ngày Chiếu</label>
+                  <div class="bar"></div>             
+              </div>
+              <div class="group float-left">
+                  <select required formControlName="SuatChieu" name="SuatChieu" ngModel>   
+                      <option selected disabled>Chọn Suất</option>
+                      <option *ngFor="let suat of SuatTheoNgay" [value]="suat.ShowTimeID">{{suat.GioChieu | slice:0:5}}</option>
+                  </select>
+                  <label class="label">Suất Chiếu</label>
+                  <div class="bar"></div>             
+              </div>
+          </form>
+      </div>
+
+
+    </div>
+</div>
+</div>
+
+<div class="BookResponsive">
+    <h1 class="text-center" data-toggle="modal" data-target="#QuickBook">Quick Booking</h1>
+</div>
+
+
+
+<div class="modal left fade" id="QuickBook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body bodycontent">
+                <button type="button" class="close dong" data-dismiss="modal">&times;</button>
+                <div class="background">
+                  </div>
+
+
+                  <form [formGroup]="formBooking" #FormBooking="ngForm">
+                      <div class="row">
+                          <div class="col-12">
+                                <div class="group">
+                                        <select required  formControlName="TenRap" name="TenRap" ngModel>
+                                            <option selected disabled>Chọn rạp</option>
+                                              <option *ngFor="let rap of dsrap" [value]="rap.ten">{{rap.ten}}</option>
+                                        </select>
+                                        <label class="label">Tên Rạp</label>
+                                        <div class="bar"></div>             
+                                    </div>
+                          </div>
+
+                          <div class="col-12">
+                                <div class="group">
+                                        <select required formControlName="TenPhim" name="TenPhim" ngModel>  
+                                            <option selected disabled>Chọn Phim</option> 
+                                            <option *ngFor="let phim of dsphim" [value]="phim.ID">{{phim.Title}}</option>
+                                        </select>
+                                        <label class="label">Tên Phim</label>
+                                        <div class="bar"></div>             
+                                    </div>
+                          </div>
+                          <div class="col-12">
+                                <div class="group">
+                                        <select required formControlName="NgayChieu" name="NgayChieu" ngModel> 
+                                            <option selected disabled>Chọn Ngày</option>  
+                                            <option *ngFor="let ngay of arrLichChieu" [value]="ngay.NgayChieu">{{ngay.NgayChieu | date:'EEEE, MMMM d'}}</option>
+                                        </select>
+                                        <label class="label">Ngày Chiếu</label>
+                                        <div class="bar"></div>             
+                                    </div>
+                          </div>
+                          <div class="col-12">
+                                <div class="group">
+                                        <select required formControlName="SuatChieu" name="SuatChieu" ngModel>   
+                                            <option selected disabled>Chọn Suất</option>
+                                            <option *ngFor="let suat of SuatTheoNgay" [value]="suat.ShowTimeID">{{suat.GioChieu | slice:0:5}}</option>
+                                        </select>
+                                        <label class="label">Suất Chiếu</label>
+                                        <div class="bar"></div>             
+                                    </div>
+                          </div>
+                      </div>
+                    </form>
+            </div>
+          </div>
+        </div>
+      </div>

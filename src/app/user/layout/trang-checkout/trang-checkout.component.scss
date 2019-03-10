@@ -1,0 +1,89 @@
+@import '../../../../assets/styles/main.scss';
+
+#CheckoutPage{
+    background: $ColorBackground;
+    color:white;
+    padding-bottom: 100px;
+}
+
+small{
+    color:$ColorFont;
+    font-size:75% !important;
+}
+
+
+h3{
+    position: relative;
+    margin-top: 75px;
+    margin-bottom: 75px;
+
+}
+h3::before{
+    @include line();
+}
+
+
+
+.divCheckout{
+}
+
+//TenPhim
+.labelPhim{
+    position: relative;
+}
+.labelPhim::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #c0c0c026;
+    bottom: -11px;
+}
+
+
+.thoigiandiadiem{
+    position: relative;
+}
+
+.lineok::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #c0c0c026;
+}
+
+
+.thongbao{
+    position: relative;
+    i{
+        position: absolute;
+        top:35%;
+        left:60%;
+        transform: translate(-50%,-50%);
+        font-size: 14em;
+    }
+}
+
+@media(max-width:1024px){
+    #CheckoutPage{
+        padding-bottom: 40px; 
+        min-height: 84vh;
+    }
+}
+
+@media(max-width:768px){
+    #CheckoutPage{
+        padding-bottom: 40px;
+        min-height: 79vh;
+    }
+}
+
+@media(max-width:414px){
+    .thongbao{
+        display: none;
+    }
+    .divCheckout{
+        width:100% !important;
+    }
+}
